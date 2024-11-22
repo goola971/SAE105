@@ -1,0 +1,27 @@
+header {
+	display: flex;
+	background-image: url("../image/mont_fuji.jpg");
+	background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+	height: 70vh;
+	width: 100%;
+}
+
+header .header_top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 10vh;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.137);
+	padding: 0 2vw;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+
+header .header_top button {
+	background-color: transparent;
+	border: none;
+}

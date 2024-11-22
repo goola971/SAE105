@@ -1,0 +1,15 @@
+/* lien font fichier*/
+@font-face {
+	font-family: "Last Shuriken";
+	src: url("../font/The\ Last\ Shuriken.otf") format("otf");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Last Shuriken";
+}
