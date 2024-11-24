@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="../CSS/style.css" />
 		<link rel="stylesheet" href="../CSS/header.css" />
 		<link rel="stylesheet" href="../CSS/index.css" />
+		<link rel="stylesheet" href="../CSS/footer.css" />
 		<title>Document</title>
 	</head>
 	<body>
@@ -52,18 +53,88 @@
 					</button>
 				</div>
 			</div>
+			<div>
+				<h1>ジャポン</h1>
+			</div>
 		</header>
 		<main>
 			<section class="card_header_bottom"></section>
 			<div class="cards_container">
 				<h1>selection</h1>
 				<section class="cards">
-					<article class="card" id="card1"></article>
-					<article class="card" id="card2"></article>
-					<article class="card" id="card3"></article>
+					<article class="card" id="card1">
+						<div
+							class="desc"
+							id="card1desc"
+							onclick="window.location.href='mount_fuji.html' "
+						>
+							<h2>Mont fuji</h2>
+							<p id="carddescp">
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Rem, aliquam placeat facilis
+								reprehenderit ut nobis, rerum autem cupiditate
+								est harum qui quae. Neque eius delectus
+								dignissimos veritatis exercitationem aliquam?
+								Tenetur!
+							</p>
+						</div>
+					</article>
+					<article class="card" id="card2">
+						<div
+							class="desc"
+							id="card2desc"
+							onclick="window.location.href='tour_de_tokyo.html' "
+						>
+							<h2>Tour de Tokyo</h2>
+							<p id="carddescp">
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Rem, aliquam placeat facilis
+								reprehenderit ut nobis, rerum autem cupiditate
+								est harum qui quae. Neque eius delectus
+								dignissimos veritatis exercitationem aliquam?
+								Tenetur!
+							</p>
+						</div>
+					</article>
+					<article
+						class="card"
+						id="card3"
+						onclick="window.location.href=''"
+					>
+						<div class="desc" id="card3desc">
+							<h2>Mount Fuji</h2>
+							<p id="carddescp">
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Rem, aliquam placeat facilis
+								reprehenderit ut nobis, rerum autem cupiditate
+								est harum qui quae. Neque eius delectus
+								dignissimos veritatis exercitationem aliquam?
+								Tenetur!
+							</p>
+						</div>
+					</article>
 				</section>
 			</div>
 		</main>
+		<footer></footer>
+		<button class="button_top" id="button_top">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				class="lucide lucide-arrow-up"
+			>
+				<path d="m5 12 7-7 7 7" />
+				<path d="M12 19V5" />
+			</svg>
+		</button>
+		<script src="../JS/script.js"></script>
 		<script src="../JS/panel.js"></script>
 	</body>
 </html>

@@ -1,7 +1,7 @@
 /* lien font fichier*/
 @font-face {
 	font-family: "Last Shuriken";
-	src: url("../font/The\ Last\ Shuriken.otf") format("otf");
+	src: url("../font/The\ Last\ Shuriken.ttf") format("ttf");
 }
 
 * {
@@ -12,4 +12,19 @@
 
 body {
 	font-family: "Last Shuriken";
+	scroll-behavior: smooth;
+}
+
+.button_top {
+	position: fixed;
+	bottom: 5vh;
+	right: 5vh;
+	background-color: rgb(255, 255, 255);
+	filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+	border: none;
+	width: 50px;
+	height: 50px;
+	z-index: 999;
+	border-radius: 50%;
+	cursor: pointer;
 }

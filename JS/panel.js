@@ -5,7 +5,7 @@ card_style.type = "text/css";
 
 card_style.textContent = `
 .cards {
-	width: 100vw;
+	width: 100%;
 	height: 50vh;
 	background-color: #f9f4ef;
 	display: flex;
@@ -16,8 +16,7 @@ card_style.textContent = `
 	cursor: pointer;
 	background-color: black;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	height: 100%;
 	transition: all 0.5s ease-in-out;
 }
 

@@ -4,20 +4,31 @@ main {
 	align-items: center;
 	height: 100vh;
 	gap: 10vh;
+	padding: 0 2vw;
 }
 
 .card_header_bottom {
 	display: flex;
 	/* justify-content: space-between; */
-	align-items: center;
+	/* align-items: center; */
 	height: 30vh;
 	width: 60%;
 	background-color: rgb(255, 255, 255);
-	padding: 0 2vw;
-	position: sticky;
+	padding: 0 1vw;
+
 	margin-top: -10vh;
 	border-radius: 20px;
 	filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.25));
+}
+
+.cards_container {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+	height: 60vh;
+	width: 100%;
+	border-radius: 20px;
 }
 
 #card1 {
@@ -37,4 +48,38 @@ main {
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
+}
+
+.desc {
+	background-color: rgba(0, 0, 0, 0.2);
+	color: white;
+	margin-top: auto;
+	width: 100%;
+	text-align: center;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 1vh;
+}
+
+.desc p {
+	opacity: 0;
+	max-height: 0; /* On cache le contenu en réduisant la hauteur */
+	overflow: hidden; /* Évite que le texte déborde */
+	transition: opacity 0.3s ease, max-height 0.3s ease; /* Animation fluide */
+}
+
+.card:hover .desc {
+	width: 60%;
+	background-color: rgba(0, 0, 0, 0.5);
+	text-align: left;
+}
+
+.card:hover .desc p {
+	opacity: 1;
+	max-height: 200px; /* Ajuste selon la hauteur réelle de ton texte */
+}
+.desc.active p {
+	opacity: 1;
+	max-height: 200px; /* La hauteur nécessaire pour tout afficher */
 }
