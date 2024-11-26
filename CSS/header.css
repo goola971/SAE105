@@ -69,11 +69,13 @@ header h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-radius: 20px;
+	border-radius: 25vw;
+	padding: 0.5vh 0.5vw;
 }
 
 .search input {
 	padding: 1vh 2vw 1vh 1vw;
 	border: none;
+	outline: none;
 	border-radius: 20px 0 0 20px;
 }
