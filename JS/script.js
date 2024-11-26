@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const cards = document.querySelectorAll(".card");
 	const buttontotop = document.getElementById("button_top");
+	var button_menu = document.getElementById("button_menu");
+	var menu = document.getElementById("header_menu");
+	var menu_close = document.getElementById("menu_close");
+	var menu_open = document.getElementById("menu_open");
+
+	menu.style.display = "none";
 	cards.forEach((card) => {
 		const desc = card.querySelector(".desc");
 		const descp = desc.querySelector("p");
@@ -19,5 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
 			top: 0,
 			behavior: "smooth",
 		});
+	});
+
+	button_menu.addEventListener("click", () => {
+		if (menu.style.display === "none") {
+			menu.style.display = "flex";
+		} else {
+			menu.style.display = "none";
+		}
 	});
 });
