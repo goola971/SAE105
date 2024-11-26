@@ -27,10 +27,11 @@ header {
 
 header h1 {
 	color: white;
-	font-size: 5rem;
+	font-size: 5vh;
 	margin-left: 5vw;
-	display: flex;
-	align-items: center;
+	margin-top: auto;
+	margin-bottom: auto;
+	display: block;
 }
 
 .header_menu {
@@ -61,4 +62,18 @@ header h1 {
 .header_menu ul li a {
 	color: white;
 	text-decoration: none;
+}
+
+.search {
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+}
+
+.search input {
+	padding: 1vh 2vw 1vh 1vw;
+	border: none;
+	border-radius: 20px 0 0 20px;
 }
