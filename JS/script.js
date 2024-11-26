@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	buttontotop.addEventListener("click", () => {
 		window.scrollTo({
 			top: 0,
-			behavior: "smooth",
+			behavior: "smooth"
 		});
 	});
 
@@ -46,13 +46,59 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 	button_search.addEventListener("click", () => {
 		if (input_search.style.display === "none") {
-			input_search.style.display = "block";
-			search.style.backgroundColor = "white";
-			button_search.style.filter = "invert(1)";
+			openSearch();
 		} else {
+			search_input();
+		}
+		// detecter si click entrer
+		input_search.addEventListener("keydown", (e) => {
+			if (e.key === "Enter" && input_search.value !== "") {
+				search_input();
+			}
+		});
+	});
+
+	function openSearch() {
+		input_search.style.display = "block";
+		search.style.backgroundColor = "white";
+		button_search.style.filter = "invert(1)";
+		setTimeout(() => {
+			input_search.style.width = "20vw";
+		}, 70);
+	}
+
+	function closeSearch() {
+		input_search.style.width = "0";
+		setTimeout(() => {
 			input_search.style.display = "none";
 			search.style.backgroundColor = "transparent";
 			button_search.style.filter = "invert(0)";
+			input_search.value = "";
+		}, 300);
+	}
+
+	function search_input() {
+		const query = document
+			.getElementById("input_search")
+			.value.toLowerCase();
+		const cards = document.querySelectorAll(".card");
+		let resultsFound = false;
+
+		cards.forEach((card) => {
+			const title = card.querySelector("h2").textContent.toLowerCase();
+			const desc = card.querySelector("p").textContent.toLowerCase();
+			if (title.includes(query) || desc.includes(query)) {
+				card.style.display = "flex";
+				resultsFound = true;
+			} else {
+				card.style.display = "none";
+			}
+		});
+		if (resultsFound === false) {
+			alert("Aucun résultat trouvé pour : " + query);
+			window.location.href = "index.html";
+		} else {
+			closeSearch();
 		}
-	});
+	}
 });
