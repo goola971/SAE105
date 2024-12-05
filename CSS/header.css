@@ -1,11 +1,20 @@
 header {
-	background-image: url("../image/mont_fuji.jpg");
+	/* background-image: url("../image/mont_fuji.jpg"); */
 	background-size: cover;
 	background-position: top center;
 	background-repeat: no-repeat;
 	height: 75vh;
 	width: 100%;
 	margin-bottom: 5vh;
+}
+
+header iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 75vh;
+	z-index: -1;
 }
 
 .header_top {
